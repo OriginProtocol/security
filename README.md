@@ -1,4 +1,4 @@
-Repo for organizing meterials related to security.
+Repo for organizing materials related to security.
 
 # Table of Contents
  1. [References](#references)
