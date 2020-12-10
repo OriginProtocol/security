@@ -5,13 +5,15 @@ Repo for organizing materials related to security.
  1. [Checklists](#checklists)
  1. [Tools](#tools)
 
-##= References
+## References
  - [Solidity security considerations](https://docs.soliditylang.org/en/v0.7.5/security-considerations.html)
  - [Trail of Bits curated list](https://github.com/crytic/awesome-ethereum-security)
  - [Caveats about ecrecover](https://docs.kaleido.io/faqs/why-ecrecover-fails/)
 
 # Checklists
-TODO
+ - [ERC20 token integration checklist](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md)
+ - [OUSD PR checklist](https://github.com/OriginProtocol/origin-dollar/blob/master/pull_request_template.md)
+ - [OUSD deployment checklist](https://docs.google.com/spreadsheets/d/1phyzOJMmTBPIqTTa0v7HY6XJkjRmbrcdULRZPo_JEoY/edit?usp=sharing)
 
 
 # Tools
