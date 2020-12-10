@@ -5,7 +5,7 @@ Repo for organizing materials related to security.
  1. [Checklists](#checklists)
  1. [Tools](#tools)
  1. [External audits](#external-audits)
- 1. [Defi postmortems](#defi-post-mortems)
+ 1. [Defi postmortems](#defi-postmortems)
 
 # References
  - [Solidity security considerations](https://docs.soliditylang.org/en/v0.7.5/security-considerations.html)
@@ -46,5 +46,5 @@ TODO: add instructions
   - Single Asset Staking
     - [Dec 2020 - Solidified](https://drive.google.com/file/d/1U-pv_wcijwvVHynb1-6ddy4S49_JNKQe/view?usp=sharing)
 
-# Defi post-mortems
+# Defi postmortems
   - [Opyn - Aug 2020](https://medium.com/opyn/opyn-eth-put-exploit-post-mortem-1a009e3347a8)
