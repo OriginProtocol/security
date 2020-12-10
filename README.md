@@ -5,14 +5,41 @@ Repo for organizing materials related to security.
  1. [Checklists](#checklists)
  1. [Tools](#tools)
 
-## References
+##= References
  - [Solidity security considerations](https://docs.soliditylang.org/en/v0.7.5/security-considerations.html)
  - [Trail of Bits curated list](https://github.com/crytic/awesome-ethereum-security)
+ - [Caveats about ecrecover](https://docs.kaleido.io/faqs/why-ecrecover-fails/)
 
-
-## Checklists
+# Checklists
 TODO
 
 
-## Tools
-TODO
+# Tools
+
+## Slither
+[Slither](https://github.com/crytic/slither) is static analysis tool for Solidity contracts.
+
+### How to run it
+```
+pip3 install slither-analyzer
+cd origin-dollar/contracts
+yarn install
+yarn run slither
+```
+
+## Echidna
+[Echidna](https://github.com/crytic/echidna) is a test fuzzer for Solidity contracts.
+
+### How to run it
+TODO: add instructions
+
+# External audits
+  - OGN
+    - [Sept 2019 - Trail of Bits](https://drive.google.com/file/d/1VaK8hZrKpkeKNe9dL4NlfgcsfTKLh9cv/view?usp=sharing)
+  - OUSD
+    - [Nov 2020 - Trail of Bits](https://drive.google.com/file/d/1wW7QsoHdB9u5b_jc6oTfU1LT3YwJZ0P_/view?usp=sharing)
+    - Dec 2020 Solidified
+  - Single Asset Staking
+    - [Dec 2020 - Solidified](https://drive.google.com/file/d/1U-pv_wcijwvVHynb1-6ddy4S49_JNKQe/view?usp=sharing)
+  
+
