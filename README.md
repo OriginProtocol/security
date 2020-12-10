@@ -5,7 +5,7 @@ Repo for organizing materials related to security.
  1. [Checklists](#checklists)
  1. [Tools](#tools)
 
-## References
+# References
  - [Solidity security considerations](https://docs.soliditylang.org/en/v0.7.5/security-considerations.html)
  - [Trail of Bits curated list](https://github.com/crytic/awesome-ethereum-security)
  - [Caveats about ecrecover](https://docs.kaleido.io/faqs/why-ecrecover-fails/)
@@ -44,3 +44,5 @@ TODO: add instructions
   - Single Asset Staking
     - [Dec 2020 - Solidified](https://drive.google.com/file/d/1U-pv_wcijwvVHynb1-6ddy4S49_JNKQe/view?usp=sharing)
 
+# Defi post-mortems
+  - [Opyn - Aug 2020](https://medium.com/opyn/opyn-eth-put-exploit-post-mortem-1a009e3347a8)
