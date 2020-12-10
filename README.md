@@ -14,7 +14,7 @@ Repo for organizing materials related to security.
  - [ERC20 token integration checklist](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md)
  - [OUSD PR checklist](https://github.com/OriginProtocol/origin-dollar/blob/master/pull_request_template.md)
  - [OUSD deployment checklist](https://docs.google.com/spreadsheets/d/1phyzOJMmTBPIqTTa0v7HY6XJkjRmbrcdULRZPo_JEoY/edit?usp=sharing)
-
+ - Origin Protocol New employee checklist: search for "New employee" on google drive.
 
 # Tools
 
@@ -43,5 +43,4 @@ TODO: add instructions
     - Dec 2020 Solidified
   - Single Asset Staking
     - [Dec 2020 - Solidified](https://drive.google.com/file/d/1U-pv_wcijwvVHynb1-6ddy4S49_JNKQe/view?usp=sharing)
-  
 
