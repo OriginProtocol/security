@@ -4,8 +4,8 @@ Repo for organizing materials related to security.
  1. [References](#references)
  1. [Checklists](#checklists)
  1. [Tools](#tools)
- 1. [External audits](#externalaudits)
- 1. [Defi postmortems](#defipost-mortems)
+ 1. [External audits](#external-audits)
+ 1. [Defi postmortems](#defi-post-mortems)
 
 # References
  - [Solidity security considerations](https://docs.soliditylang.org/en/v0.7.5/security-considerations.html)
