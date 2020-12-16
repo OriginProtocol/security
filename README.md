@@ -46,6 +46,8 @@ cd origin-dollar/contracts
 yarn run echidna
 ```
 
+Note that the test take about ~30min to run.
+
 # External audits
   - OGN
     - [Sept 2019 - Trail of Bits](https://drive.google.com/file/d/1VaK8hZrKpkeKNe9dL4NlfgcsfTKLh9cv/view?usp=sharing)
@@ -56,4 +58,5 @@ yarn run echidna
     - [Dec 2020 - Solidified](https://drive.google.com/file/d/1U-pv_wcijwvVHynb1-6ddy4S49_JNKQe/view?usp=sharing)
 
 # Defi postmortems
+  - [Incident reports](/incidents)
   - [Opyn - Aug 2020](https://medium.com/opyn/opyn-eth-put-exploit-post-mortem-1a009e3347a8)
