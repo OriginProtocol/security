@@ -21,7 +21,7 @@ Repo for organizing materials related to security.
 # Tools
 
 ## Slither
-[Slither](https://github.com/crytic/slither) is static analysis tool for Solidity contracts.
+[Slither](https://github.com/crytic/slither) does static analysis tool for Solidity contracts.
 
 ### How to run it
 ```
@@ -34,8 +34,19 @@ yarn run slither
 ## Echidna
 [Echidna](https://github.com/crytic/echidna) is a test fuzzer for Solidity contracts.
 
+The Echnida tests for the OUSD contracts are under [contracts/contract/crytic](https://github.com/OriginProtocol/origin-dollar/tree/master/contracts/contracts/crytic).
+
 ### How to run it
-TODO: add instructions
+On MacOS and Linux, download the latest pre-compiled binaries from [here](https://github.com/crytic/echidna/releases).
+Untar the files in a directory and add the path where the echidna-test binary was extracted to your shell's PATH.
+
+To run the tests:
+```
+cd origin-dollar/contracts
+yarn run echidna
+```
+
+Note that the test take about ~30min to run.
 
 # External audits
   - OGN
@@ -47,4 +58,5 @@ TODO: add instructions
     - [Dec 2020 - Solidified](https://drive.google.com/file/d/1U-pv_wcijwvVHynb1-6ddy4S49_JNKQe/view?usp=sharing)
 
 # Defi postmortems
+  - [Incident reports](/incidents)
   - [Opyn - Aug 2020](https://medium.com/opyn/opyn-eth-put-exploit-post-mortem-1a009e3347a8)
