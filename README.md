@@ -21,7 +21,7 @@ Repo for organizing materials related to security.
 # Tools
 
 ## Slither
-[Slither](https://github.com/crytic/slither) does static analysis tool for Solidity contracts.
+[Slither](https://github.com/crytic/slither) is a static analysis tool for Solidity contracts.
 
 ### How to run it
 ```
@@ -35,7 +35,7 @@ yarn run slither
 ```
 yarn run slither --triage
 ```
-Running this command will open an interactive console where you can select the errors/warning that you want to be excluded. Once done, commit and push the updated Slither DB file.
+Running this command will open an interactive console where you can select the errors/warning that you want to be excluded. Once done, commit and push the updated Slither DB file. Note: make sure you are running the latest version of slither on your local.
 
 ## Echidna
 [Echidna](https://github.com/crytic/echidna) is a test fuzzer for Solidity contracts.
