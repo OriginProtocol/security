@@ -31,6 +31,12 @@ yarn install
 yarn run slither
 ```
 
+### Updating Slither DB
+```
+yarn run slither --triage
+```
+Running this command will open an interactive console where you can select the errors/warning that you want to be excluded. Once done, commit and push the updated Slither DB file.
+
 ## Echidna
 [Echidna](https://github.com/crytic/echidna) is a test fuzzer for Solidity contracts.
 
