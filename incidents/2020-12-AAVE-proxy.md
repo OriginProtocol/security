@@ -24,12 +24,41 @@ Except the Aave proxy code, rather than reverting if there was no backing implem
 
 ## Are we vulnerable?
 
-We have three delegatecall’s in our code. Two in our proxy implementation and one in vaultCore calling down to the admin functions.
-
 1. **OK** - We don’t use delegatecall outside of proxy contract calls.
-2. **OK** - We explicitly revert in each place we use delegatecall.
 
-Notes: Our vaultCore acts as a proxy. It does both a delegatecall, and does admin/upgrade functionality. It might be worth a second check that this is all correct.
+We have three delegatecall’s in our code. Two in our proxy implementation and one in VaultCore calling down to the admin functions.
+
+2. **ADJUST** - Our proxies also don't revert on missing code.
+
+This would only be a problem if an implementation contract self destructed. We can't accidently upgrade to point at an address without code, since Open Zepplin checks that the new implementation address is actually a contract during the upgrade process.
+
+We use the same Open Zepplin proxy contract as the base for our upgradability. In testing this out locally, we can see that our proxy will also return successful transactions in the event that there is no backing implementation:
+
+    # From the origin-dollar repo, as of commit 2ad9e95895d0edcd16d3d42128ea64f016dddc3f
+    # > cd contracts
+    # > npx hardhat console
+
+    const vaultProxyFactory = await hre.ethers.getContractFactory("VaultProxy")
+    vaultProxy = await vaultProxyFactory.deploy()
+    vault = await hre.ethers.getContractAt("IVault", vaultProxy.address)
+
+    // Should throw because an invaild coin, a zero mint, and getting less coins,
+    // but instead returns a success when no backing implementation.
+    tx = await vault.mint(vault.address, 0, 100)
+
+    await hre.ethers.provider.getTransactionReceipt(tx.hash)
+
+
+Checking on each proxy call would add about 800-900 gas per transaction.
+
+We'll add a check for delegatecall and selfdestruct to our code review checklist.
+
+3. **FIXING** VaultCore proxy code should match the rest of our proxy code
+
+Our VaultCore acts as a proxy. It does both a delegatecall, and does admin/upgrade functionality. The proxy implimentation on VaultCore is correct, however the setAdminImpl does not check that the new address is a valid contract.
+
+This is fixed in [PR-466](https://github.com/OriginProtocol/origin-dollar/pull/466).
+
 
 ## What went right.
 
