@@ -54,7 +54,7 @@ task("exploit", async (taskArguments, hre) => {
   console.log(" ⦿ Claiming rewards");
   await blacksmith.connect(attackerSigner).claimRewards(bpt.address);
   const coverBalanceAfter = await cover.balanceOf(attacker);
-  console.log(` ⦿ Attacker $COVER balanceOf ${coverBalanceBefore}`);
+  console.log(` ⦿ Attacker $COVER balanceOf ${coverBalanceAfter}`);
   console.log(` ⦿ $COVER gain ${coverBalanceAfter.sub(coverBalanceBefore)}`);
 });
 
