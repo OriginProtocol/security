@@ -1,0 +1,741 @@
+[
+{
+  "constant": true,
+  "inputs": [],
+  "name": "redeemFeeBps",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "governor",
+  "outputs": [
+    {
+      "internalType": "address",
+      "name": "",
+      "type": "address"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "uniswapAddr",
+  "outputs": [
+    {
+      "internalType": "address",
+      "name": "",
+      "type": "address"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": false,
+  "inputs": [
+    {
+      "internalType": "address",
+      "name": "_asset",
+      "type": "address"
+    },
+    {
+      "internalType": "uint256",
+      "name": "_amount",
+      "type": "uint256"
+    },
+    {
+      "internalType": "uint256",
+      "name": "_minimumOusdAmount",
+      "type": "uint256"
+    }
+  ],
+  "name": "mint",
+  "outputs": [],
+  "payable": false,
+  "stateMutability": "nonpayable",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "vaultBuffer",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "getAllAssets",
+  "outputs": [
+    {
+      "internalType": "address[]",
+      "name": "",
+      "type": "address[]"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "getStrategyCount",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "rebaseThreshold",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "rebasePaused",
+  "outputs": [
+    {
+      "internalType": "bool",
+      "name": "",
+      "type": "bool"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "strategistAddr",
+  "outputs": [
+    {
+      "internalType": "address",
+      "name": "",
+      "type": "address"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": false,
+  "inputs": [],
+  "name": "claimGovernance",
+  "outputs": [],
+  "payable": false,
+  "stateMutability": "nonpayable",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [
+    {
+      "internalType": "address",
+      "name": "_asset",
+      "type": "address"
+    }
+  ],
+  "name": "checkBalance",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [
+    {
+      "internalType": "uint256",
+      "name": "_amount",
+      "type": "uint256"
+    }
+  ],
+  "name": "calculateRedeemOutputs",
+  "outputs": [
+    {
+      "internalType": "uint256[]",
+      "name": "",
+      "type": "uint256[]"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": false,
+  "inputs": [
+    {
+      "internalType": "uint256",
+      "name": "_minimumUnitAmount",
+      "type": "uint256"
+    }
+  ],
+  "name": "redeemAll",
+  "outputs": [],
+  "payable": false,
+  "stateMutability": "nonpayable",
+  "type": "function"
+},
+{
+  "constant": false,
+  "inputs": [
+    {
+      "internalType": "uint256",
+      "name": "_amount",
+      "type": "uint256"
+    },
+    {
+      "internalType": "uint256",
+      "name": "_minimumUnitAmount",
+      "type": "uint256"
+    }
+  ],
+  "name": "redeem",
+  "outputs": [],
+  "payable": false,
+  "stateMutability": "nonpayable",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "maxSupplyDiff",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [
+    {
+      "internalType": "address",
+      "name": "_asset",
+      "type": "address"
+    }
+  ],
+  "name": "isSupportedAsset",
+  "outputs": [
+    {
+      "internalType": "bool",
+      "name": "",
+      "type": "bool"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "autoAllocateThreshold",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "getAssetCount",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [
+    {
+      "internalType": "address",
+      "name": "",
+      "type": "address"
+    }
+  ],
+  "name": "assetDefaultStrategies",
+  "outputs": [
+    {
+      "internalType": "address",
+      "name": "",
+      "type": "address"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": false,
+  "inputs": [],
+  "name": "allocate",
+  "outputs": [],
+  "payable": false,
+  "stateMutability": "nonpayable",
+  "type": "function"
+},
+{
+  "constant": false,
+  "inputs": [],
+  "name": "rebase",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "newTotalSupply",
+      "type": "uint256"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "nonpayable",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "priceProvider",
+  "outputs": [
+    {
+      "internalType": "address",
+      "name": "",
+      "type": "address"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "isGovernor",
+  "outputs": [
+    {
+      "internalType": "bool",
+      "name": "",
+      "type": "bool"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": false,
+  "inputs": [
+    {
+      "internalType": "address",
+      "name": "_newGovernor",
+      "type": "address"
+    }
+  ],
+  "name": "transferGovernance",
+  "outputs": [],
+  "payable": false,
+  "stateMutability": "nonpayable",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "totalValue",
+  "outputs": [
+    {
+      "internalType": "uint256",
+      "name": "value",
+      "type": "uint256"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": true,
+  "inputs": [],
+  "name": "capitalPaused",
+  "outputs": [
+    {
+      "internalType": "bool",
+      "name": "",
+      "type": "bool"
+    }
+  ],
+  "payable": false,
+  "stateMutability": "view",
+  "type": "function"
+},
+{
+  "constant": false,
+  "inputs": [
+    {
+      "internalType": "address[]",
+      "name": "_assets",
+      "type": "address[]"
+    },
+    {
+      "internalType": "uint256[]",
+      "name": "_amounts",
+      "type": "uint256[]"
+    },
+    {
+      "internalType": "uint256",
+      "name": "_minimumOusdAmount",
+      "type": "uint256"
+    }
+  ],
+  "name": "mintMultiple",
+  "outputs": [],
+  "payable": false,
+  "stateMutability": "nonpayable",
+  "type": "function"
+},
+{
+  "constant": false,
+  "inputs": [
+    {
+      "internalType": "address",
+      "name": "newImpl",
+      "type": "address"
+    }
+  ],
+  "name": "setAdminImpl",
+  "outputs": [],
+  "payable": false,
+  "stateMutability": "nonpayable",
+  "type": "function"
+},
+{
+  "payable": true,
+  "stateMutability": "payable",
+  "type": "fallback"
+},
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": false,
+      "internalType": "address",
+      "name": "_asset",
+      "type": "address"
+    }
+  ],
+  "name": "AssetSupported",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": false,
+      "internalType": "address",
+      "name": "_asset",
+      "type": "address"
+    },
+    {
+      "indexed": false,
+      "internalType": "address",
+      "name": "_strategy",
+      "type": "address"
+    }
+  ],
+  "name": "AssetDefaultStrategyUpdated",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": false,
+      "internalType": "address",
+      "name": "_addr",
+      "type": "address"
+    }
+  ],
+  "name": "StrategyApproved",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": false,
+      "internalType": "address",
+      "name": "_addr",
+      "type": "address"
+    }
+  ],
+  "name": "StrategyRemoved",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": false,
+      "internalType": "address",
+      "name": "_addr",
+      "type": "address"
+    },
+    {
+      "indexed": false,
+      "internalType": "uint256",
+      "name": "_value",
+      "type": "uint256"
+    }
+  ],
+  "name": "Mint",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": false,
+      "internalType": "address",
+      "name": "_addr",
+      "type": "address"
+    },
+    {
+      "indexed": false,
+      "internalType": "uint256",
+      "name": "_value",
+      "type": "uint256"
+    }
+  ],
+  "name": "Redeem",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [],
+  "name": "CapitalPaused",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [],
+  "name": "CapitalUnpaused",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [],
+  "name": "RebasePaused",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [],
+  "name": "RebaseUnpaused",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": false,
+      "internalType": "uint256",
+      "name": "_vaultBuffer",
+      "type": "uint256"
+    }
+  ],
+  "name": "VaultBufferUpdated",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": false,
+      "internalType": "uint256",
+      "name": "_redeemFeeBps",
+      "type": "uint256"
+    }
+  ],
+  "name": "RedeemFeeUpdated",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": false,
+      "internalType": "address",
+      "name": "_priceProvider",
+      "type": "address"
+    }
+  ],
+  "name": "PriceProviderUpdated",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": false,
+      "internalType": "uint256",
+      "name": "_threshold",
+      "type": "uint256"
+    }
+  ],
+  "name": "AllocateThresholdUpdated",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": false,
+      "internalType": "uint256",
+      "name": "_threshold",
+      "type": "uint256"
+    }
+  ],
+  "name": "RebaseThresholdUpdated",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": false,
+      "internalType": "address",
+      "name": "_address",
+      "type": "address"
+    }
+  ],
+  "name": "UniswapUpdated",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": false,
+      "internalType": "address",
+      "name": "_address",
+      "type": "address"
+    }
+  ],
+  "name": "StrategistUpdated",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": false,
+      "internalType": "uint256",
+      "name": "maxSupplyDiff",
+      "type": "uint256"
+    }
+  ],
+  "name": "MaxSupplyDiffChanged",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": true,
+      "internalType": "address",
+      "name": "previousGovernor",
+      "type": "address"
+    },
+    {
+      "indexed": true,
+      "internalType": "address",
+      "name": "newGovernor",
+      "type": "address"
+    }
+  ],
+  "name": "PendingGovernorshipTransfer",
+  "type": "event"
+},
+{
+  "anonymous": false,
+  "inputs": [
+    {
+      "indexed": true,
+      "internalType": "address",
+      "name": "previousGovernor",
+      "type": "address"
+    },
+    {
+      "indexed": true,
+      "internalType": "address",
+      "name": "newGovernor",
+      "type": "address"
+    }
+  ],
+  "name": "GovernorshipTransferred",
+  "type": "event"
+}
+]
