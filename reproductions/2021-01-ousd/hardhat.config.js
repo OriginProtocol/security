@@ -1,7 +1,6 @@
 require("@nomiclabs/hardhat-ethers");
 require("hardhat-deploy");
-require("hardhat-deploy-ethers");
-const { utils } = require("ethers");
+require("hardhat-deploy-ethers"); const { utils } = require("ethers");
 
 const vaultCoreABI = require("./abi/VaultCore.json");
 const erc20ABI = require("./abi/ERC20.json");
@@ -86,8 +85,7 @@ task("exploit", async (taskArguments, hre) => {
   // Redeploy contract to the same address, its constructor will call the attack
   // and it will transfer more than its balance reports
   await cExploitFactory.setShouldAttack(true);
-  cExploitFactory.deploy("12345", deployCode);
-  exploitAddress = await cExploitFactory.computeAddress(12345, deployCode);
+  await cExploitFactory.deploy("12345", deployCode);
 });
 
 module.exports = {
