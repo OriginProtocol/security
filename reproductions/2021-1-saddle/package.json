@@ -1,0 +1,18 @@
+{
+  "name": "2020-12-cover",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "exploit": "npx hardhat exploit"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.1",
+    "ethers": "^5.0.24",
+    "hardhat": "^2.0.6",
+    "hardhat-deploy": "^0.7.0-beta.39",
+    "hardhat-deploy-ethers": "^0.3.0-beta.7"
+  }
+}
