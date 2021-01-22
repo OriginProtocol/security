@@ -1,42 +1,88 @@
-This is an example from the code review for PR https://github.com/OriginProtocol/origin-dollar/pull/511#pullrequestreview-574518930
 
-### Requirements
-Compound no longer automatically gives you a rewards token balance automatically, instead you must claim COMP to see your balance increase.
+This template is a starting point for you customize as you review a code change. If a section is not relevant, feel free to just replace its contents with some italized text with the reason it's not used.
 
-This change will make every large allocate claim COMP, transfer COMP, and sell COMP. That's certainly better than not automatically claiming COMP at all, but does increase the gas cost quite bit.
 
-### Internal State
-Does not alter any internal state. Uses stored addresses.
+#### Requirements
 
-### Attack
-Baring an address being set wrongly, or malicious behavior from a trusted contract, I don't think this is attackable.
+_What is the PR trying to do? Is this the right thing? Are there bugs in the requirements?_
 
-### Logic
-Yay! No if statements, executes straight on through.
 
-### Tests
-No tests for verifying this code actuals functionality. Guess this code is entirely dependent on external contracts, and there's not much we could actually test here.
+#### Internal State
 
-### Flavor
-Could this code be simpler? Nope.
+- What can be always said about relationships between stored state
+- What must hold true about state before a function can run correctly (preconditions)
+- What must hold true about the return or any changes to state after a function has run.
 
-### Overflow
-No math!
+Does this code do that?
 
-### Black magic
-No black magic.
+#### Attack
 
-### Authentication
-No authentication.
+_What conditions could cause this code to fail if they were not true_
 
-### Cryptographic code
-No cryptographic code.
 
-### Gas problems
-See notes above in "Requirements".
+#### Logic
 
-### External calls
-All calls are to trusted contracts.
+_Are there bugs in the logic?_
 
-### Ethereum
-Contract does not send or receive Ethereum.
+
+#### Tests
+
+  - [ ] Each logical branch has a test
+  - [ ] Edge conditions are tested
+
+#### Flavor
+
+_Could this code be simpiler?_
+
+_Could this code be less vulnerable to other code behaving weirdly?_
+
+#### Overflow
+
+- [ ] Never use "+" or "-", always use safe math
+- [ ] Check that all for loops use uint256
+
+#### Black magic
+
+- [ ] Does not contain `selfdestruct`
+
+- [ ] Does not use `delegatecall` outside of proxying
+
+(If an implimentation contract were to call delegatecall under attacker control, it could call selfdestruct the implimentation contract, leading to calls through the proxy silently succeding, even though they were failing.)
+
+- [ ] Address.isContract
+
+
+#### Authentication
+
+- [ ] Never use tx.origin
+- [ ] Check that every external/public function should actualy be external
+- [ ] Check that every external/public function has the correct authentication
+
+#### Cryptographic code
+
+- [ ] Contracts that roll their own crypto are terrfying
+- [ ] Note that a failed signature check will result in a 0x00 result. Make sure that the result throws if it returns this.
+- [ ] Beware of signed data being used in a replay attack to other contracts.
+
+#### Gas problems
+
+- [ ] Contracts with for loops must have either:
+    - [ ] a way to remove items
+    - [ ] can be upgraded to get unstuck
+- [ ] Contracts with for loops must not allow end users to add unlimited items to a loop that is used by others or admins.
+
+#### External calls
+
+- [ ] Contract addresses passed in are validated
+- [ ] Unsafe external calls
+- [ ] Rentrancy gaurds on all state changing functions
+    - [ ] Still doesn't protect against external contracts changing the state of the world if they are called.
+- [ ] Malicious behaviors
+- [ ] Could fail from stack depth problems (low level calls much require success)
+- [ ] No slippage attacks (we need to validate expected tokens recevied)
+- [ ] Oracles?
+
+#### Ethereum
+
+- [ ] Contract does not send or receive Ethereum.
+- [ ] Contract has no payable methods.
