@@ -49,7 +49,7 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 
 (If an implimentation contract were to call delegatecall under attacker control, it could call selfdestruct the implimentation contract, leading to calls through the proxy silently succeding, even though they were failing.)
 
-- [ ] Address.isContract
+- [ ] Address.isContract should be treated as if could return anything at any time, because that's reality.
 
 
 #### Authentication
