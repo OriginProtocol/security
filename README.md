@@ -56,12 +56,12 @@ Note that the test take about ~30min to run.
 
 # External audits
   - OGN
-    - [Sept 2019 - Trail of Bits](https://drive.google.com/file/d/1VaK8hZrKpkeKNe9dL4NlfgcsfTKLh9cv/view?usp=sharing)
+    - [Sept 2019 - Trail of Bits](https://github.com/OriginProtocol/security/blob/master/audits/Trail%20of%20Bits%20-%20Origin%20Marketplace%20and%20OGN%20Token%20-%20Nov%202018.pdf)
   - OUSD
-    - [Nov 2020 - Trail of Bits](https://drive.google.com/file/d/1wW7QsoHdB9u5b_jc6oTfU1LT3YwJZ0P_/view?usp=sharing)
-    - Dec 2020 Solidified
+    - [Nov 2020 - Trail of Bits](https://github.com/OriginProtocol/security/blob/master/audits/Trail%20of%20Bits%20-%20Origin%20Dollar%20-%20Dec%202020.pdf)
+    - [Dec 2020 Solidified](https://github.com/OriginProtocol/security/blob/master/audits/Solidified%20-%20Origin%20Dollar%20-%20Dec%202020.pdf)
   - Single Asset Staking
-    - [Dec 2020 - Solidified](https://drive.google.com/file/d/1U-pv_wcijwvVHynb1-6ddy4S49_JNKQe/view?usp=sharing)
+    - [Dec 2020 - Solidified](https://github.com/OriginProtocol/security/blob/master/audits/Solidified%20-%20OGN%20Staking%20-%20Dec%202020.pdf)
 
 # Defi postmortems
   - [Incident reports](/incidents)
