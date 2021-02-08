@@ -1,16 +1,17 @@
 Repo for organizing materials related to security.
 
 # Table of Contents
- 1. [References](#references)
+ 1. [Security materials](#materials)
  1. [Checklists](#checklists)
  1. [Tools](#tools)
  1. [External audits](#external-audits)
  1. [Defi postmortems](#defi-postmortems)
 
-# References
+# Security materials
  - [Solidity security considerations](https://docs.soliditylang.org/en/v0.7.5/security-considerations.html)
  - [Trail of Bits curated list](https://github.com/crytic/awesome-ethereum-security)
  - [Caveats about ecrecover](https://docs.kaleido.io/faqs/why-ecrecover-fails/)
+ - [2020 paradigm CTF writeup](https://github.com/DanielVF/2020_paradigm_ctf_writeup)
 
 # Checklists
  - [ERC20 token integration checklist](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md)
