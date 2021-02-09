@@ -31,7 +31,7 @@ _Using the [transactions](https://etherscan.io/tx/0xc71cea6fa00d11e98f6733ee8740
    - Withdraw 57.659k ETH liquidity from StableSwapSETH Pool, also burns any lpToken to get more ETH than deposited.
    - Deploy another contract and withdraw from the vault to the new contract and in turn transfer to the first contract (Not sure why this is being done)
    - Self-destruct both contracts after depositing remaing ETH to the attacker contract
-3. Repeat Step 5 times, earning 2k ETH each time. 
+3. Repeat Step 2, 5 times, earning 2k ETH each time. 
 4. Repay borrowed ETH from dYdX
 
 At the end of the transaction, the attacker ended up with 10k ETH. With $1700/ETH price, it's about $1.7m in value.
