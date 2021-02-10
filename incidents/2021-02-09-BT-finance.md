@@ -10,27 +10,18 @@ An attack was targeted at some of their vault contracts and this has led to an l
 
 ## Technical description
 
-At a high level, the exploiter was able to profit through the following steps:
-
-1. Debalance the exchange rate between ETH/sETH in Curve's sETH pool.
-2. Make the BT's ETH vault deposit into the pool at an unfavorable exchange rate.
-3. Reverse the imbalance caused in step 1.
-
+A detailed analysis [is over here](https://ethtx.info/mainnet/0xc71cea6fa00d11e98f6733ee8740f239cb37b11dec29e7cf85d7a4077977fa65)
 
 _Using the [transactions](https://etherscan.io/tx/0xc71cea6fa00d11e98f6733ee8740f239cb37b11dec29e7cf85d7a4077977fa65) as an example._
 
-- Borrow 100k ETH from dYdX
-
-- Repay 100k ETH to dYdX
-
-1. Borrow 100k ETH from dYdX to the attacker contract
+1. Borrow 100k ETH from dYdX to the controller contract
 2. Create a new contract 
-   - Deposit 62k ETH to the new contract
-   - Add 57.659k ETH liquidity to StableSwapSETH Pool to cause price imbalance for ETH/sETH pair
-   - Deposit 4.43k ETH to BT.finance's ETH vault which in turns add that as liquidity to StableSwapSETH Pool using the imbalanced price
-   - Withdraw 57.659k ETH liquidity from StableSwapSETH Pool, also burns any lpToken to get more ETH than deposited.
-   - Deploy another contract and withdraw from the vault to the new contract and in turn transfer to the first contract (Not sure why this is being done)
-   - Self-destruct both contracts after depositing remaing ETH to the attacker contract
+   1. Add 57.659k ETH liquidity to StableSwapSETH Pool to cause price imbalance for ETH/sETH pair
+   2. Deposit 4.43k ETH to BT.finance's ETH vault which in turns add that as liquidity to StableSwapSETH Pool
+   3. Withdraw 57.659k ETH liquidity from StableSwapSETH Pool, also burns any lpToken (eCRV) to get more ETH than deposited.
+   4. Transfer from the vault to the address (where another exploit contract would be created)
+   5. Create the second exploit contract with create2
+   6. Call `suicide` on both exploit contracts after transferring balance to the controller contract
 3. Repeat Step 2, 5 times, earning 2k ETH each time. 
 4. Repay borrowed ETH from dYdX
 
@@ -40,6 +31,6 @@ At the end of the transaction, the attacker ended up with 10k ETH. With $1700/ET
 
 - Attack started at Feb-08-2021 08:10:01 PM +UTC with a series transactions adding and removing liquidity from this [contract] (https://etherscan.io/address/0x54b5ae5ebe86d2d86134f3bb7e36e7c83295cbcb)
 
-
 ## Conclusion
-???
+
+The root cause of the exploit seem to be causing price imbalance in the Curve's sETH pool and benefitting from it. The same exploit should not work on OUSD, since we are not using any of Curve's pools right now. But we should definitely consider a way to detect and prevent flash loan attacks at contract-level.
