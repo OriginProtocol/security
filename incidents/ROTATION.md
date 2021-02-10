@@ -15,9 +15,9 @@ We decided to setup up a rotation whereas everyone in the engineering team gets 
   1. sparrow
   1. crazybuster
   1. shah
+  1. franck
   1. nick
   1. josh
-  1. franck
   1. mike
 
 Note: rotation generated using this [script](https://gist.github.com/franckc/052f5a802f294683453e2578867ad90b)
