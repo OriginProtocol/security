@@ -6,15 +6,19 @@ _Franck, Feb 10, 2021._
 
 [Growth DeFi](https://growthdefi.com/) Is a DeFi protocol centered around the GRO and stkGRO (staked) tokens.
 
-On Feb 8, one of the [rAAVE](https://raave.io/) staking pool(rAAVE/stkGRO) pool was attacked and the attacker stole ~800 ETH.
+On Feb 8, one of the [rAAVE](https://raave.io/) staking pool(rAAVE/stkGRO) pool was attacked and the attacker stole ~800 ETH ($1.3M).
 
 
 ## Technical description
 
-A very detailed analysis by the GrowthDeFi team can be found [here](https://growthdefi.medium.com/raave-farming-contract-exploit-explained-f3b6f0b3c1b3)
+A very detailed analysis by the GrowthDeFi team can be found [here](https://growthdefi.medium.com/raave-farming-contract-exploit-explained-f3b6f0b3c1b3) and summary in this (article)[https://rekt.eth.link/the-big-combo/].
 
 The vulnerability was caused by a missing input validation on the contract method for staking pool contract.
-The [fix](https://github.com/GrowthDeFi/raave-v1-core/commit/d33dafd82d38c693fba8e23966c81830ca4a4168).
+- It allowed the attacker to created a fake token called AXZ and to supply rAXZZ/GRO liquidity into a Uniswap pool they created.
+- They then staked the LP tokens from that pool into the stkGRO/rAAVE pool (due to the missing validation).
+- Finally, they were able to then withdrew from the pool to gain rAAVE and GRO token that they liquidated for ETH.
+
+Here is the [fix](https://github.com/GrowthDeFi/raave-v1-core/commit/d33dafd82d38c693fba8e23966c81830ca4a4168).
 
 ## Timeline
 
