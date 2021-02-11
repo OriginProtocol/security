@@ -8,7 +8,7 @@ Repo for organizing materials related to security.
  1. [External audits](#external-audits)
 
 # Defi incident reports
-  - [reports](/incidents)
+  - [Reports](/incidents)
 
 # Security materials
  - [Solidity security considerations](https://docs.soliditylang.org/en/v0.7.5/security-considerations.html)
