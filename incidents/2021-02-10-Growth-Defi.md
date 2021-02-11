@@ -14,7 +14,7 @@ On Feb 8, one of the [rAAVE](https://raave.io/) staking pool(rAAVE/stkGRO) pool 
 A very detailed analysis by the GrowthDeFi team can be found [here](https://growthdefi.medium.com/raave-farming-contract-exploit-explained-f3b6f0b3c1b3) and summary in this [article]](https://rekt.eth.link/the-big-combo/).
 
 The vulnerability was caused by a missing input validation on a method from a staking pool contract.
-- The attacker to create a fake token called AXZ and to supply rAXZZ/GRO liquidity into a Uniswap pool they created.
+- The attacker created a fake token called sAXZZ and supplied rAXZZ/GRO liquidity into a Uniswap pool they created.
 - Then they staked the LP tokens from that malicious pool into the stkGRO/rAAVE pool (by taking advantage of the missing input check).
 - Finally, they withdrew from the pool to gain rAAVE and GRO token that they liquidated for ETH.
 
