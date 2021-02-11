@@ -1,11 +1,14 @@
 Repo for organizing materials related to security.
 
 # Table of Contents
- 1. [Security materials](#materials)
+ 1. [Defi incident reports](#defi-incident-reports)
+ 1. [Security materials](#security-materials)
  1. [Checklists](#checklists)
  1. [Tools](#tools)
  1. [External audits](#external-audits)
- 1. [Defi postmortems](#defi-postmortems)
+
+# Defi incident reports
+  - [reports](/incidents)
 
 # Security materials
  - [Solidity security considerations](https://docs.soliditylang.org/en/v0.7.5/security-considerations.html)
@@ -64,6 +67,3 @@ Note that the test take about ~30min to run.
   - Single Asset Staking
     - [Dec 2020 - Solidified](https://github.com/OriginProtocol/security/blob/master/audits/Solidified%20-%20OGN%20Staking%20-%20Dec%202020.pdf)
 
-# Defi postmortems
-  - [Incident reports](/incidents)
-  - [Opyn - Aug 2020](https://medium.com/opyn/opyn-eth-put-exploit-post-mortem-1a009e3347a8)
