@@ -29,7 +29,7 @@ Here is the [fix](https://github.com/GrowthDeFi/raave-v1-core/commit/d33dafd82d3
 
 The root cause of the exploit was a missing check in a core method of a staking pool contract.
  - This was [custom](https://github.com/GrowthDeFi/raave-v1-core/blob/master/contracts/modules/UniswapV2LiquidityPoolAbstraction.sol) contract code, not forked.
- - While some contracts from GrowthDefi were [audited](https://consensys.net/diligence/audits/2020/12/growth-defi-v1/#potentially-dangerous-use-of-a-cached-exchange-rate-from-compound), it does not seem the audit included the exploited contract.
+ - While some contracts from GrowthDefi were [audited](https://consensys.net/diligence/audits/2020/12/growth-defi-v1), it does not seem the audit included the exploited contract.
  - The amount of [unit tests](https://github.com/GrowthDeFi/raave-v1-core/tree/master/test) for those contracts is minimal.
 
 Overall, there is no reason to believe OUSD is currently at risk of a similar attack.
