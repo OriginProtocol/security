@@ -1,4 +1,4 @@
-# DRAFT - Alpha Hormora v2 Exploit
+# Alpha Hormora v2 Exploit
 
 _Josh Fraser 2021-2-13._
 
