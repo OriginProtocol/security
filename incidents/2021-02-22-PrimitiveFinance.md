@@ -14,7 +14,7 @@ The attack uses Uniswap flash-swaps to call one of their core contracts (a "conn
 
 Primitive contracts [have previously been through an audit by OpenZeppelin](https://blog.openzeppelin.com/primitive-audit/) that covered the `Primitives`, `Option`, `Redeem`, and `Trader` contracts.  The referenced repository and [commit in this audit](https://github.com/primitivefinance/primitive-contracts/tree/98060324ac6588b1d05748911325a4d39869e4ae) appear to have been renamed and undergone a restructuring since the audit.  
 
-The audit did not uncover the vulnerability that was exploited.
+The audit **did not** include the Connector contracts that were the target for the exploit.
 
 ## Details
 
