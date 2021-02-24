@@ -1,5 +1,5 @@
 
-This template is a starting point for you customize as you review a code change. If a section is not relevant, feel free to just replace its contents with some italized text with the reason it's not used.
+This template is a starting point for you customize as you review a code change. If a section is not relevant, feel free to just replace its contents with some italicized text with the reason it's not used.
 
 
 #### Requirements
@@ -32,7 +32,7 @@ _Are there bugs in the logic?_
 
 #### Flavor
 
-_Could this code be simpiler?_
+_Could this code be simpler?_
 
 _Could this code be less vulnerable to other code behaving weirdly?_
 
@@ -47,7 +47,7 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 
 - [ ] Does not use `delegatecall` outside of proxying
 
-(If an implimentation contract were to call delegatecall under attacker control, it could call selfdestruct the implimentation contract, leading to calls through the proxy silently succeding, even though they were failing.)
+(If an implementation contract were to call delegatecall under attacker control, it could call selfdestruct the implimentation contract, leading to calls through the proxy silently succeding, even though they were failing.)
 
 - [ ] Address.isContract should be treated as if could return anything at any time, because that's reality.
 
@@ -55,12 +55,12 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 #### Authentication
 
 - [ ] Never use tx.origin
-- [ ] Check that every external/public function should actualy be external
+- [ ] Check that every external/public function should actually be external
 - [ ] Check that every external/public function has the correct authentication
 
 #### Cryptographic code
 
-- [ ] Contracts that roll their own crypto are terrfying
+- [ ] Contracts that roll their own crypto are terrifying
 - [ ] Note that a failed signature check will result in a 0x00 result. Make sure that the result throws if it returns this.
 - [ ] Beware of signed data being used in a replay attack to other contracts.
 
@@ -75,7 +75,7 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 
 - [ ] Contract addresses passed in are validated
 - [ ] Unsafe external calls
-- [ ] Rentrancy gaurds on all state changing functions
+- [ ] Reentrancy guards on all state changing functions
     - [ ] Still doesn't protect against external contracts changing the state of the world if they are called.
 - [ ] Malicious behaviors
 - [ ] Could fail from stack depth problems (low level calls much require success)
