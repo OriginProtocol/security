@@ -28,6 +28,7 @@ _Are there bugs in the logic?_
 #### Tests
 
   - [ ] Each logical branch has a test
+  - [ ] Each require() has a test
   - [ ] Edge conditions are tested
 
 #### Flavor
@@ -47,7 +48,7 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 
 - [ ] Does not use `delegatecall` outside of proxying
 
-(If an implementation contract were to call delegatecall under attacker control, it could call selfdestruct the implimentation contract, leading to calls through the proxy silently succeding, even though they were failing.)
+(If an implementation contract were to call delegatecall under attacker control, it could call selfdestruct the implementation contract, leading to calls through the proxy silently succeeding, even though they were failing.)
 
 - [ ] Address.isContract should be treated as if could return anything at any time, because that's reality.
 
@@ -79,7 +80,7 @@ _Could this code be less vulnerable to other code behaving weirdly?_
     - [ ] Still doesn't protect against external contracts changing the state of the world if they are called.
 - [ ] Malicious behaviors
 - [ ] Could fail from stack depth problems (low level calls much require success)
-- [ ] No slippage attacks (we need to validate expected tokens recevied)
+- [ ] No slippage attacks (we need to validate expected tokens received)
 - [ ] Oracles?
 
 #### Ethereum
