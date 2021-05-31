@@ -82,6 +82,7 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 - [ ] Could fail from stack depth problems (low level calls much require success)
 - [ ] No slippage attacks (we need to validate expected tokens received)
 - [ ] Oracles?
+- [ ] Do we call balanceOf for external contracts to determine what they will do, when they instead use internal accounting?
 
 #### Ethereum
 
