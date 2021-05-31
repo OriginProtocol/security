@@ -19,7 +19,7 @@ Swap pools often do not control the transfer of funds into them, either for swap
 
 The actual attack has over 700 events emitted during the transaction. For simplification, I've narrowed down to just the core attack, and used hypothetical numbers.
 
-We've made a reproduction of this simplified attack available, using the actual spartan pool code.
+We've made a [reproduction of this simplified attack](https://github.com/OriginProtocol/security/blob/master/reproductions/2021-05-02-spartan/tests/test_hack.py) available, using the actual spartan pool code.
 
 ### 1. AddLiquidity
 
