@@ -33,7 +33,7 @@ However, while the distribute function does indeed distribute the correct amount
 | -95| removed from sender's account|
 | +95| added to recipient account.  |
 
-This results in a 4% net increase in BOG over the transferred amount on each transfer.
+This results in a 3% net increase in BOG over the transferred amount on each transfer.
 
 A second effect of this missing code is that transfers will leave money in the senders account. When we narrow down to just looking at the changes to sender's account on a transfer of 100 BOG:
 
