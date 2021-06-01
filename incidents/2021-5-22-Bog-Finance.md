@@ -26,7 +26,7 @@ The part of the code that handles transaction fees looks correct at first glance
 
 However, while the distribute function does indeed distribute the correct amount to the stakers, it does not actually remove any funds from the sender when doing so. The net effect then is to create BOG. When the sender sends 100 BOG:
 
-|Change | To                        |
+|Change | Reason                    |
 |-------|---------------------------|
 | +4 | sent to stakers.             |
 | -1 | burned from senders's account|
@@ -37,7 +37,7 @@ This results in a 4% net increase in BOG over the transferred amount on each tra
 
 A second effect of this missing code is that transfers will leave money in the senders account. When we narrow down to just looking at the changes to sender's account on a transfer of 100 BOG:
 
-|Change | To                        |
+|Change | Reason                    |
 |-------|---------------------------|
 | -1 | burned from senders's account|
 | -95| removed from sender's account|
