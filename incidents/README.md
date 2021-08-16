@@ -10,8 +10,8 @@ We decided to setup up a rotation so that everyone in the engineering team gets 
  - It is impossible to predict when the next hack will occur. An engineer who is next on the rotation may be OOO when a hack happens. In that case, we can simply have the next person on the list, or anyone who wants to volunteer, trade their spot with them.
 
 # Rotation
-  1. [@DanielVF](https://github.com/DanielVF)
   1. [@tomlinton](https://github.com/tomlinton)
+  1. [@DanielVF](https://github.com/DanielVF)
   1. [@sparrowDom](https://github.com/sparrowDom)
   1. [@crazybuster](https://github.com/crazybuster)
   1. [@joshfraser](https://github.com/joshfraser)
