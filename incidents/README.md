@@ -14,11 +14,6 @@ We decided to setup up a rotation so that everyone in the engineering team gets 
   1. [@tomlinton](https://github.com/tomlinton)
   1. [@sparrowDom](https://github.com/sparrowDom)
   1. [@crazybuster](https://github.com/crazybuster)
-  1. [@shahthepro](https://github.com/shahthepro)
-  1. [@franckc](https://github.com/franckc)
   1. [@joshfraser](https://github.com/joshfraser)
-  1. [@mikeshultz](https://github.com/mikeshultz)
-  1. [@nick](https://github.com/nick)
-  1. [@cipherzzz](https://github.com/cipherzzz)
 
 Note: rotation generated using this [script](https://gist.github.com/franckc/052f5a802f294683453e2578867ad90b)
