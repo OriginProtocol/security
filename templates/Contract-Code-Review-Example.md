@@ -7,6 +7,8 @@ This template is a starting point for you customize as you review a code change.
 _What is the PR trying to do? Is this the right thing? Are there bugs in the requirements?_
 
 
+### Deployment Considerations
+
 #### Internal State
 
 - What can be always said about relationships between stored state
@@ -27,6 +29,7 @@ _Are there bugs in the logic?_
 
 #### Tests
 
+  - [ ] Each publicly callable method has a test
   - [ ] Each logical branch has a test
   - [ ] Each require() has a test
   - [ ] Edge conditions are tested
@@ -45,11 +48,8 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 #### Black magic
 
 - [ ] Does not contain `selfdestruct`
-
 - [ ] Does not use `delegatecall` outside of proxying
-
-(If an implementation contract were to call delegatecall under attacker control, it could call selfdestruct the implementation contract, leading to calls through the proxy silently succeeding, even though they were failing.)
-
+- [ ] (If an implementation contract were to call delegatecall under attacker control, it could call selfdestruct the implementation contract, leading to calls through the proxy silently succeeding, even though they were failing.)
 - [ ] Address.isContract should be treated as if could return anything at any time, because that's reality.
 
 
@@ -68,8 +68,9 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 #### Gas problems
 
 - [ ] Contracts with for loops must have either:
-    - [ ] a way to remove items
-    - [ ] can be upgraded to get unstuck
+    - [ ] A way to remove items
+    - [ ] Can be upgraded to get unstuck
+    - [ ] Size can only controlled by admins
 - [ ] Contracts with for loops must not allow end users to add unlimited items to a loop that is used by others or admins.
 
 #### External calls
@@ -79,10 +80,14 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 - [ ] Reentrancy guards on all state changing functions
     - [ ] Still doesn't protect against external contracts changing the state of the world if they are called.
 - [ ] Malicious behaviors
-- [ ] Could fail from stack depth problems (low level calls much require success)
+- [ ] Could fail from stack depth problems (low level calls must require success)
 - [ ] No slippage attacks (we need to validate expected tokens received)
-- [ ] Oracles?
-- [ ] Do we call balanceOf for external contracts to determine what they will do, when they instead use internal accounting?
+- [ ] Oracles, one of:
+  - [ ] No oracles
+  - [ ] Oracles can't be bent
+  - [ ] If oracle can be bent, it won't hurt us.
+- [ ] Don't call balanceOf for external contracts to determine what they will do, when they instead use internal accounting?
+
 
 #### Ethereum
 
