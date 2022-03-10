@@ -24,10 +24,11 @@ Repo for public materials related to [OUSD](https://www.ousd.com) security.
 
 # Tools
 
-## Slither
+## Testing
+### Slither
 [Slither](https://github.com/crytic/slither) is a static analysis tool for Solidity contracts.
 
-### How to run it
+#### How to run it
 ```
 pip3 install slither-analyzer
 cd origin-dollar/contracts
@@ -35,18 +36,18 @@ yarn install
 yarn run slither
 ```
 
-### Updating Slither DB
+#### Updating Slither DB
 ```
 yarn run slither --triage
 ```
 Running this command will open an interactive console where you can select the errors/warning that you want to be excluded. Once done, commit and push the updated Slither DB file. Note: make sure you are running the latest version of slither on your local.
 
-## Echidna
+### Echidna
 [Echidna](https://github.com/crytic/echidna) is a test fuzzer for Solidity contracts.
 
 The Echnida tests for the OUSD contracts are under [contracts/contract/crytic](https://github.com/OriginProtocol/origin-dollar/tree/master/contracts/contracts/crytic).
 
-### How to run it
+#### How to run it
 On MacOS and Linux, download the latest pre-compiled binaries from [here](https://github.com/crytic/echidna/releases).
 Untar the files in a directory and add the path where the echidna-test binary was extracted to your shell's PATH.
 
@@ -56,7 +57,10 @@ cd origin-dollar/contracts
 yarn run echidna
 ```
 
-Note that the test take about ~30min to run.
+Note that the tests take about ~30min to run.
+
+## Analysis
+  - Transaction decoder: https://ethtx.info/
 
 # External audits
   - OGN
