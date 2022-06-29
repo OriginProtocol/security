@@ -63,14 +63,8 @@ Note that the tests take about ~30min to run.
   - Transaction decoder: https://ethtx.info/
 
 # External audits
-  - OGN
-    - [Sept 2019 - Trail of Bits](https://github.com/OriginProtocol/security/blob/master/audits/Trail%20of%20Bits%20-%20Origin%20Marketplace%20and%20OGN%20Token%20-%20Nov%202018.pdf)
-  - OUSD
-    - [Nov 2020 - Trail of Bits](https://github.com/OriginProtocol/security/blob/master/audits/Trail%20of%20Bits%20-%20Origin%20Dollar%20-%20Dec%202020.pdf)
-    - [Dec 2020 Solidified](https://github.com/OriginProtocol/security/blob/master/audits/Solidified%20-%20Origin%20Dollar%20-%20Dec%202020.pdf)
-  - Single Asset Staking
-    - [Dec 2020 - Solidified](https://github.com/OriginProtocol/security/blob/master/audits/Solidified%20-%20OGN%20Staking%20-%20Dec%202020.pdf)
-
+  See [this directory](https://github.com/OriginProtocol/security/tree/master/audits)
+  
 # Bug bounty program
   - Refer to https://docs.ousd.com/security-and-risks/bug-bounties
   - [Example of a well written bug report](https://gist.github.com/DanielVF/66f459da88804d1fd917c47576c68523)
