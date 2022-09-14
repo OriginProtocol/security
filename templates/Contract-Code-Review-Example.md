@@ -53,7 +53,7 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 - [ ] Address.isContract should be treated as if could return anything at any time, because that's reality.
 
 #### Dependencies
-- [ ] Review any new contract dependencies (e.g. OpenZepplin imports) when new dependencies are added or version of dependencies changes.
+- [ ] Review any new contract dependencies (e.g. OpenZepplin imports) when new dependencies are added or version of dependencies changes. Review those contracts in depth. 
 
 #### Authentication
 
