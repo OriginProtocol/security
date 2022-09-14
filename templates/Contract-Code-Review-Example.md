@@ -52,6 +52,8 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 - [ ] (If an implementation contract were to call delegatecall under attacker control, it could call selfdestruct the implementation contract, leading to calls through the proxy silently succeeding, even though they were failing.)
 - [ ] Address.isContract should be treated as if could return anything at any time, because that's reality.
 
+#### Dependencies
+- [ ] Review any new contract dependencies (e.g. OpenZepplin imports) when new dependencies are added or version of dependencies changes.
 
 #### Authentication
 
