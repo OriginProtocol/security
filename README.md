@@ -19,6 +19,7 @@ Repo for public materials related to [OUSD](https://www.ousd.com) security.
 # Checklists
  - [ERC20 token integration checklist](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md)
  - [OUSD PR checklist](https://github.com/OriginProtocol/origin-dollar/blob/master/pull_request_template.md)
+ - [OUSD Verbose Contract PR checklist](https://github.com/OriginProtocol/security/blob/master/templates/Contract-Code-Review-Example.md)
  - [OUSD deployment checklist](https://docs.google.com/spreadsheets/d/1phyzOJMmTBPIqTTa0v7HY6XJkjRmbrcdULRZPo_JEoY/edit?usp=sharing)
  - Origin Protocol New employee checklist: search for "New employee" on google drive.
 
