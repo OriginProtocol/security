@@ -42,7 +42,7 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 
 #### Overflow
 
-- [ ] Never use "+" or "-", always use safe math
+- [ ] Never use "+" or "-", always use safe math or have contract compile in solidity version > 0.8
 - [ ] Check that all for loops use uint256
 
 #### Black magic
