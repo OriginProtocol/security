@@ -61,7 +61,9 @@ yarn run echidna
 Note that the tests take about ~30min to run.
 
 ## Analysis
-  - Transaction decoder: https://ethtx.info/
+  - Transaction viewers:
+    - https://tx.eth.samczsun.com/
+    - https://ethtx.info/
 
 # External audits
   See [this directory](https://github.com/OriginProtocol/security/tree/master/audits)
