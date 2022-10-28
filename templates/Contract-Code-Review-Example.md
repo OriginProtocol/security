@@ -45,6 +45,9 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 - [ ] Never use "+" or "-", always use safe math or have contract compile in solidity version > 0.8
 - [ ] Check that all for loops use uint256
 
+#### Proxy
+- [ ] Make sure proxy implementation contracts don't initialise variable state on variable declaration and do it rather in initialize function.
+
 #### Black magic
 
 - [ ] Does not contain `selfdestruct`
