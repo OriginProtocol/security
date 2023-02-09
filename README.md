@@ -60,14 +60,15 @@ yarn run echidna
 
 Note that the tests take about ~30min to run.
 
-## Tools
-- Transaction viewers:
+## Transaction viewers
   - https://openchain.xyz/trace
-  - https://tx.eth.samczsun.com/
-  - https://ethtx.info/
-- Bytecode decompiler
+  - https://tx.eth.samczsun.com
+  - https://ethtx.info
+
+## Bytecode decompilers
   - https://library.dedaub.com/decompile
-- 4byte signature databases
+
+## 4byte signature databases
   - https://openchain.xyz/signatures
   - https://www.4byte.directory
 
