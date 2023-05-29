@@ -103,4 +103,4 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 
 - [ ] Contract does not send or receive Ethereum.
 - [ ] Contract has no payable methods.
-- [ ] If contract interacts with ETH make sure there are no read only reentrancy (like [this one]([url](https://chainsecurity.com/curve-lp-oracle-manipulation-post-mortem/)) in Curve pools)
+- [ ] If contract interacts with ETH make sure there are no read only reentrancies (like [this one]([url](https://chainsecurity.com/curve-lp-oracle-manipulation-post-mortem/)) in Curve pools)
