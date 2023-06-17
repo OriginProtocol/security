@@ -51,6 +51,7 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 #### Black magic
 
 - [ ] Does not contain `selfdestruct`
+- [ ] Does not re-set immutable variables in the constructor that a base contract has already set. (since operation fails silently)
 - [ ] Does not use `delegatecall` outside of proxying
 - [ ] (If an implementation contract were to call delegatecall under attacker control, it could call selfdestruct the implementation contract, leading to calls through the proxy silently succeeding, even though they were failing.)
 - [ ] Address.isContract should be treated as if could return anything at any time, because that's reality.
