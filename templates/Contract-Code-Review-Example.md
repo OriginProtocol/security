@@ -56,9 +56,9 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 - [ ] Address.isContract should be treated as if could return anything at any time, because that's reality.
 
 #### Dependencies
-- [ ] Review any new contract dependencies thoroughly (e.g. OpenZepplin imports) when new dependencies are added or version of dependencies changes.
+- [ ] Review any new contract dependencies thoroughly (e.g. OpenZeppelin imports) when new dependencies are added or version of dependencies changes.
 - [ ] If OpenZeppelin ACL roles are use review & enumerate all of them.
-- [ ] Check OpenZeppling [security vulnerabilities](https://github.com/OpenZeppelin/openzeppelin-contracts/security/advisories) and see if any apply to current PR considering the version of OpenZeppling contract used.
+- [ ] Check OpenZeppelin [security vulnerabilities](https://github.com/OpenZeppelin/openzeppelin-contracts/security/advisories) and see if any apply to current PR considering the version of OpenZeppelin contract used.
 
 #### Deploy
 - [ ] Check that any deployer permissios are removed after deploy
