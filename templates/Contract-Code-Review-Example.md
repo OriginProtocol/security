@@ -61,7 +61,7 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 - [ ] Check OpenZeppelin [security vulnerabilities](https://github.com/OpenZeppelin/openzeppelin-contracts/security/advisories) and see if any apply to current PR considering the version of OpenZeppelin contract used.
 
 #### Deploy
-- [ ] Check that any deployer permissios are removed after deploy
+- [ ] Check that any deployer permissions are removed after deploy
 
 #### Authentication
 
