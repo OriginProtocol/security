@@ -46,7 +46,7 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 - [ ] Check that all for loops use uint256
 
 #### Proxy
-- [ ] Make sure proxy implementation contracts don't initialise variable state on variable declaration and do it rather in initialize function.
+- [ ] Make sure proxy implementation contracts don't initialize variable state on variable declaration and do it rather in initialize function.
 
 #### Black magic
 
