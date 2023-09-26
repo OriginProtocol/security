@@ -25,7 +25,7 @@ _What conditions could cause this code to fail if they were not true_
 #### Logic
 
   - [ ] _Are there bugs in the logic?_
-  - [ ] Correct usage of global & local variables. -> they might differentiate only by an underscore that can be overlooked (address vs _address).
+  - [ ] Correct usage of global & local variables. -> they might differentiate only by an underscore that can be overlooked (e.g. address vs _address).
 
 
 #### Tests
