@@ -24,7 +24,9 @@ _What conditions could cause this code to fail if they were not true_
 
 #### Logic
 
-_Are there bugs in the logic?_
+  - [ ] _Are there bugs in the logic?_
+  - [ ] Correct usage of global & local variables. -> they might differentiate only by an underscore that can be overlooked (e.g. address vs _address).
+  - [ ] Do public/external functions having asset parameter verify the asset is supported (where applicable)
 
 
 #### Tests
@@ -33,6 +35,7 @@ _Are there bugs in the logic?_
   - [ ] Each logical branch has a test
   - [ ] Each require() has a test
   - [ ] Edge conditions are tested
+  - [ ] If tests interact with AMM make sure enough edge cases (pool tilts) are tested. Ideally with fuzzing.
 
 #### Flavor
 
