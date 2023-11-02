@@ -86,7 +86,7 @@ _Could this code be less vulnerable to other code behaving weirdly?_
 #### External calls
 
 - [ ] Contract addresses passed in are validated
-- [ ] Unsafe external calls
+- [ ] No unsafe external calls
 - [ ] Reentrancy guards on all state changing functions
     - [ ] Still doesn't protect against external contracts changing the state of the world if they are called.
 - [ ] Malicious behaviors
