@@ -11,8 +11,8 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 #### Authentication
 
 - [ ] Never use tx.origin
-- [ ] Check that every external/public function should actually be external
-- [ ] Check that every external/public function has the correct authentication
+- [ ] Every external/public function should be externally accessible
+- [ ] Every external/public function has the correct authentication
 
 #### Ethereum
 
@@ -21,7 +21,7 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 
 #### Cryptographic code
 
-- [ ] This code contract does not roll it's own crypto.
+- [ ] This contract code does not roll it's own crypto.
 - [ ] No signature checks without reverting on a 0x00 result.
 - [ ] No signed data could be used in a replay attack, on our contract or others.
 
@@ -36,23 +36,27 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 #### Black magic
 
 - [ ] Does not contain `selfdestruct`
-- [ ] Does not use `delegatecall` outside of proxying
-- [ ] (If an implementation contract were to call delegatecall under attacker control, it could call selfdestruct the implementation contract, leading to calls through the proxy silently succeeding, even though they were failing.)
+- [ ] Does not use `delegatecall` outside of proxying. _If an implementation contract were to call delegatecall under attacker control, it could call selfdestruct the implementation contract, leading to calls through the proxy silently succeeding, even though they were failing._
 - [ ] Address.isContract should be treated as if could return anything at any time, because that's reality.
 
 #### Overflow
 
-- [ ] Code is solidity version > 0.8
+- [ ] Code is solidity version >= 0.8.0
 - [ ] Check that all for loops use uint256
 
 #### Proxy
-- [ ] Make sure proxy implementation contracts don't initialize storage variable state on variable declaration, instead do it do it in an initialize function.
+
+- [ ] No storage variable initialized at definition when contract used as a proxy implementation.
+
+#### Events
+- [ ] All state changing functions emit events
 
 ## Medium Checks
 
 #### Rounding
 - [ ] Contract rounds in the protocols favor
 - [ ] Contract does not have bugs from loosing rounding precision
+- [ ] Code correctly multiplies before division
 - [ ] Contract does not have bugs from zero or near zero amounts
 
 #### Dependencies
@@ -66,14 +70,14 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 - [ ] No unsafe external calls
 - [ ] Reentrancy guards on all state changing functions
     - [ ] Still doesn't protect against external contracts changing the state of the world if they are called.
-- [ ] Malicious behaviors
-- [ ] Could fail from stack depth problems (low level calls must require success)
+- [ ] No Malicious behaviors
+- [ ] Low level call() must require success.
 - [ ] No slippage attacks (we need to validate expected tokens received)
 - [ ] Oracles, one of:
   - [ ] No oracles
   - [ ] Oracles can't be bent
   - [ ] If oracle can be bent, it won't hurt us.
-- [ ] Don't call balanceOf for external contracts to determine what they will do, when they instead use internal accounting?
+- [ ] Do not call balanceOf for external contracts to determine what they will do when they use internal accounting
 
 #### Tests
 
@@ -85,11 +89,11 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 
 #### Deploy
 
-- [ ] Check that any deployer permissions are removed after deploy
+- [ ] Deployer permissions are removed after deploy
 
 ## Strategy Specific
 
-_Remove this section if the code being reviewed is not a strategy_
+_Remove this section if the code being reviewed is not a strategy._
 
 #### Smart contract
 
@@ -128,7 +132,11 @@ Does this code do that?
 
 #### Attack
 
-_What conditions could cause this code to fail if they were not true_
+_What could the impacts of code failure in this code be._
+
+_What conditions could cause this code to fail if they were not true._
+
+_Does this code successfully block all attacks._
 
 #### Flavor
 
