@@ -2,7 +2,7 @@
 This template is a starting point for you customize as you review a code change. If a section is not relevant, feel free to just replace its contents with some italicized text with the reason it's not used.
 
 ```
-#### Requirements
+## Requirements
 
 _What is the PR trying to do? Is this the right thing? Are there bugs in the requirements?_
 
@@ -11,7 +11,7 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 #### Authentication
 
 - [ ] Never use tx.origin
-- [ ] Every external/public function should be externally accessible
+- [ ] Every external/public function is supposed to be externally accessible
 - [ ] Every external/public function has the correct authentication
 
 #### Ethereum
@@ -42,7 +42,7 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 #### Overflow
 
 - [ ] Code is solidity version >= 0.8.0
-- [ ] Check that all for loops use uint256
+- [ ] All for loops use uint256
 
 #### Proxy
 
@@ -95,9 +95,10 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 
 _Remove this section if the code being reviewed is not a strategy._
 
-#### Smart contract
+#### Strategy checks
 
 - [ ] **Can check balance be manipulated up AND down by an attacker**
+- [ ] **No read only reentrancy on downstream protocols during balance checking**
 - [ ] All reward tokens be collected
 - [ ] The harvester can sell all reward tokens
 - [ ] No funds fall into the cracks and are be reported in check balance as a result of depositing or withdrawing
