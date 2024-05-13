@@ -18,6 +18,7 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 
 - [ ] Contract does not send or receive Ethereum.
 - [ ] Contract has no payable methods.
+- [ ] Contract is not vulnerable to being sent self destruct ETH
 
 #### Cryptographic code
 
@@ -70,7 +71,7 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 - [ ] No unsafe external calls
 - [ ] Reentrancy guards on all state changing functions
     - [ ] Still doesn't protect against external contracts changing the state of the world if they are called.
-- [ ] No Malicious behaviors
+- [ ] No malicious behaviors
 - [ ] Low level call() must require success.
 - [ ] No slippage attacks (we need to validate expected tokens received)
 - [ ] Oracles, one of:
@@ -115,9 +116,9 @@ _Remove this section if the code being reviewed is not a strategy._
 
 #### Logic
 
-  - [ ] _Are there bugs in the logic?_
+  _Are there bugs in the logic?_
+
   - [ ] Correct usage of global & local variables. -> they might differentiate only by an underscore that can be overlooked (e.g. address vs _address).
-  - [ ] Do public/external functions having asset parameter verify the asset is supported (where applicable)
 
 #### Deployment Considerations
 
