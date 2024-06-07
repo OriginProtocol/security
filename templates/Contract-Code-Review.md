@@ -98,12 +98,12 @@ _Remove this section if the code being reviewed is not a strategy._
 
 #### Strategy checks
 
-- [ ] **Can check balance be manipulated up AND down by an attacker**
-- [ ] **No read only reentrancy on downstream protocols during balance checking**
-- [ ] All reward tokens be collected
+- [ ] Check balance cannot be manipulated up AND down by an attacker
+- [ ] No read only reentrancy on downstream protocols during checkBalance
+- [ ] All reward tokens are collected
 - [ ] The harvester can sell all reward tokens
-- [ ] No funds fall into the cracks and are be reported in check balance as a result of depositing or withdrawing
-- [ ] All funds can be reccovered from the strategy by some combination of depositAll, withdraw, or withdrawAll()
+- [ ] No funds are left in the contract that should not be as a result of depositing or withdrawing
+- [ ] All funds can be recovered from the strategy by some combination of depositAll, withdraw, or withdrawAll()
 - [ ] WithdrawAll() can always withdraw an amount equal to or larger than checkBalances report, even in spite of attacker manipulation.
 - [ ] WithdrawAll() cannot be MEV'd
 - [ ] Strategist cannot steal funds
