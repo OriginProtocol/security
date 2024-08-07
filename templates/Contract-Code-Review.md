@@ -54,11 +54,12 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 
 ## Medium Checks
 
-#### Rounding
+#### Rounding and casts
 - [ ] Contract rounds in the protocols favor
 - [ ] Contract does not have bugs from loosing rounding precision
 - [ ] Code correctly multiplies before division
 - [ ] Contract does not have bugs from zero or near zero amounts
+- [ ] Safecast is aways used when casting
 
 #### Dependencies
 - [ ] Review any new contract dependencies thoroughly (e.g. OpenZeppelin imports) when new dependencies are added or version of dependencies changes.
