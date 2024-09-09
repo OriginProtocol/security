@@ -127,6 +127,9 @@ _Remove this section if the code being reviewed is not a strategy._
 
 _Are there things that must be done on deploy, or in the wider ecosystem for this code to work. Are they done?_
 
+#### Resource usage
+- Identify if the contract interacts with any external contracts and alters their state. If there is an expectation of the external contract's state confirm that any/all operations meet it. 
+
 #### Internal State
 
 - What can be always said about relationships between stored state
