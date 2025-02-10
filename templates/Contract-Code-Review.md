@@ -48,6 +48,7 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 #### Proxy
 
 - [ ] No storage variable initialized at definition when contract used as a proxy implementation.
+- [ ] Implementation contracts if Governable need to set 0 governor in constructor `_setGovernor(address(0))`
 
 #### Events
 - [ ] All state changing functions emit events
