@@ -107,6 +107,7 @@ _Remove this section if the code being reviewed is not a strategy._
 - [ ] All funds can be recovered from the strategy by some combination of depositAll, withdraw, or withdrawAll()
 - [ ] WithdrawAll() can always withdraw an amount equal to or larger than checkBalances report, even in spite of attacker manipulation.
 - [ ] WithdrawAll() cannot be MEV'd
+- [ ] WithdrawAll() does not revert when strategy has 0 assets
 - [ ] Strategist cannot steal funds
 
 #### Downstream
