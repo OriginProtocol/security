@@ -13,12 +13,13 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 - [ ] Never use tx.origin
 - [ ] Every external/public function is supposed to be externally accessible
 - [ ] Every external/public function has the correct authentication
+- [ ] Every use of msg.sender is correct
 
 #### Ethereum
 
 - [ ] Contract does not send or receive Ethereum.
 - [ ] Contract has no payable methods.
-- [ ] Contract is not vulnerable to being sent self destruct ETH
+- [ ] Contract does not have a vulnerablity from being sent self destruct ETH
 
 #### Cryptographic code
 
@@ -68,7 +69,7 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 
 #### External calls
 
-- [ ] Contract addresses passed in are validated
+- [ ] Contract addresses passed in by users are validated
 - [ ] No unsafe external calls
 - [ ] Reentrancy guards on all state changing functions
     - [ ] Still doesn't protect against external contracts changing the state of the world if they are called.
@@ -93,11 +94,15 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 
 - [ ] Deployer permissions are removed after deploy
 
-## Strategy Specific
+## Origin Specifc
 
-_Remove this section if the code being reviewed is not a strategy._
+#### Governance
+
+- [ ] If a non-proxied, governed contract, governor should be set in the constructor
 
 #### Strategy checks
+
+_Remove this section if the code being reviewed is not a strategy._
 
 - [ ] Check balance cannot be manipulated up AND down by an attacker
 - [ ] No read only reentrancy on downstream protocols during checkBalance
@@ -118,9 +123,10 @@ _Remove this section if the code being reviewed is not a strategy._
 
 #### Logic
 
-  _Are there bugs in the logic?_
+_Are there bugs in the logic?_
 
-  - [ ] Correct usage of global & local variables. -> they might differentiate only by an underscore that can be overlooked (e.g. address vs _address).
+- [ ] Correct usage of global & local variables. -> they might differentiate only by an underscore that can be overlooked (e.g. address vs _address).
+- [ ] Inheritance hierachy checked both up and down for near duplicate methods
 
 #### Deployment Considerations
 
@@ -147,5 +153,7 @@ _Does this code successfully block all attacks._
 _Could this code be simpler?_
 
 _Could this code be less vulnerable to other code behaving weirdly?_
+
+- [ ] Functions follow validate, read, compute, write, call, validate 
 
 ```
