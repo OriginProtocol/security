@@ -45,6 +45,10 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 - [ ] Code is solidity version >= 0.8.0
 - [ ] All for loops use uint256
 
+#### License
+- [ ] The contract uses the appropriate limited BUSL-1.1 (Business) or the open MIT license
+- [ ] If the contract license changes from MIT to BUSL-1.1 any contracts importing it need to also have their license set to BUSL-1.1
+
 #### Proxy
 
 - [ ] No storage variable initialized at definition when contract used as a proxy implementation.
