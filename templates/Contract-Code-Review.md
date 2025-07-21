@@ -54,6 +54,9 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 #### Proxy
 
 - [ ] No storage variable initialized at definition when contract used as a proxy implementation.
+- [ ] Any added storage slots are after existing slots.
+- [ ] Any added inheritance does not affect storage slots for upgradable contracts.
+
 
 #### Events
 - [ ] All state changing functions emit events
