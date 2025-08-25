@@ -15,6 +15,7 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 - [ ] Every external/public function has the correct authentication
 - [ ] All initializers have onlyGovernor
 - [ ] Each method that changes access control has the correct access control
+- [ ] If the proxy & implementation approach is used & implementation extends Governable.sol, make sure governor on the implementation contract is explicitly set to address(0)
 
 #### Ethereum
 
