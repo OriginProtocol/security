@@ -13,6 +13,7 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
 - [ ] Never use tx.origin
 - [ ] Every external/public function is supposed to be externally accessible
 - [ ] Every external/public function has the correct authentication
+- [ ] If the proxy & implementation approach is used & implementation extends Governable.sol, make sure governor on the implementation contract is explicitly set to address(0)
 
 #### Ethereum
 
