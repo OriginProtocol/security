@@ -1,4 +1,4 @@
-Repo for public materials related to [OUSD](https://www.ousd.com) security.
+Repo for public materials related to [Origin](https://www.originprotocol.com) security.
 
 # Table of Contents
  1. [Defi incident reports](#defi-incident-reports)
@@ -15,13 +15,13 @@ Repo for public materials related to [OUSD](https://www.ousd.com) security.
  - [Trail of Bits curated list](https://github.com/crytic/awesome-ethereum-security)
  - [Caveats about ecrecover](https://docs.kaleido.io/faqs/why-ecrecover-fails/)
  - [2020 paradigm CTF writeup](https://github.com/DanielVF/2020_paradigm_ctf_writeup)
+ - [How to do a Proper Code Review](https://medium.com/@danielvf/how-to-do-a-proper-code-review-901bd037905c)
 
 # Checklists
  - [ERC20 token integration checklist](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md)
- - [OUSD PR checklist](https://github.com/OriginProtocol/origin-dollar/blob/master/pull_request_template.md)
- - [OUSD Verbose Contract PR checklist](https://github.com/OriginProtocol/security/blob/master/templates/Contract-Code-Review-Example.md)
- - [OUSD deployment checklist](https://docs.google.com/spreadsheets/d/1phyzOJMmTBPIqTTa0v7HY6XJkjRmbrcdULRZPo_JEoY/edit?usp=sharing)
- - Origin Protocol New employee checklist: search for "New employee" on google drive.
+ - [Contract PR checklist](https://github.com/OriginProtocol/origin-dollar/blob/master/pull_request_template.md)
+ - [Verbose Contract PR Checklist](https://github.com/OriginProtocol/security/blob/master/templates/Contract-Code-Review.md)
+ - [Deployment Plan template on notion](https://www.notion.so/originprotocol/Deployment-Plan-d5aa7d033cc54d78914e00bf040344d2)
 
 # Tools
 
