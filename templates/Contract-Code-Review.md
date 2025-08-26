@@ -114,6 +114,7 @@ _Remove this section if the code being reviewed is not a strategy._
 - [ ] All reward tokens are collected
 - [ ] The harvester can sell all reward tokens
 - [ ] No funds are left in the contract that should not be as a result of depositing or withdrawing
+- [ ] If the strategy deals with staking LP tokens any liquidity altering function: deposit, depositAll, withdraw, withdrawAll or custom (e.g. rebalance) should result in a state where all LP tokens owned by the contract remain staked
 - [ ] All funds can be recovered from the strategy by some combination of depositAll, withdraw, or withdrawAll()
 - [ ] WithdrawAll() can always withdraw an amount equal to or larger than checkBalances report, even in spite of attacker manipulation.
 - [ ] WithdrawAll() cannot be MEV'd
@@ -136,6 +137,9 @@ _Remove this section if the code being reviewed is not a strategy._
 #### Deployment Considerations
 
 _Are there things that must be done on deploy, or in the wider ecosystem for this code to work. Are they done?_
+
+#### Resource usage
+- Identify if the contract interacts with any external contracts and alters their state. If there is an expectation of the external contract's state confirm that any/all operations meet it. 
 
 #### Internal State
 
