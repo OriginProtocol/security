@@ -90,6 +90,7 @@ _What is the PR trying to do? Is this the right thing? Are there bugs in the req
   - [ ] Oracles can't be bent
   - [ ] If oracle can be bent, it won't hurt us.
 - [ ] Do not call balanceOf for external contracts to determine what they will do when they use internal accounting
+- [ ] Contract should follow [CEI](https://docs.soliditylang.org/en/latest/security-considerations.html#use-the-checks-effects-interactions-pattern) (Checks - Effects - Interaction) pattern
 
 #### Tests
 
